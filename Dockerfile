@@ -10,9 +10,8 @@ RUN set -xe \
     xvfb x11vnc xterm \
     sudo \
     supervisor \
-    gnupg \
-    ttf-wqy-microhei \
-    && rm -rf /var/lib/apt/lists/*
+    gnupg && \
+    rm -rf /var/lib/apt/lists/*
 
 RUN set -xe \
     && useradd -u 1000 -g 100 -G sudo --shell /bin/bash --no-create-home --home-dir /tmp user \
